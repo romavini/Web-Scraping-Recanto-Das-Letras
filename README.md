@@ -40,8 +40,11 @@ _**Web Scraping** **Python** project for the Recanto das Letras website, a socia
 user =   # Usuário
 password =   # Senha
 
+# Pasta de Poesia
+poetry_folder_path =   # (p.ex. C:\Users\user\poesias)
+
 # Webdriver
-chrome_driver_path =   # Caminho para Webdriver
+chrome_driver_path =   # Caminho para Webdriver (p.ex. C:\Users\user\.google\chromedriver.exe)
 
 # PostgreSQL
 user_db =   # Usuário do Banco de Dados
