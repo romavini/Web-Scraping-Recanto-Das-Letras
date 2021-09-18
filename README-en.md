@@ -38,9 +38,6 @@
 user =   # User
 password =   # Password
 
-# Poetry Folder
-poetry_folder_path =   # (e.g. C:\Users\user\poetry)
-
 # Webdriver
 chrome_driver_path =   # Path to Webdriver (e.g. C:\Users\user\.google\chromedriver.exe)
 
