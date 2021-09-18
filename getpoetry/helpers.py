@@ -1,7 +1,7 @@
 import traceback
 import os
 from dotenv import load_dotenv
-from selenium.common.exceptions import (
+from selenium.common.exceptions import (  # type: ignore
     NoSuchElementException,
     WebDriverException,
 )

@@ -1,17 +1,17 @@
-from getpoetry.psql.database import read_db
+from getpoetry.psql.database import read_db  # type: ignore
 from getpoetry.helpers import exception_handler, get_env, print_message
 from time import sleep
 import sys
 from datetime import datetime
 from random import random
 from typing import Dict, List
-
-import pandas as pd
+import pandas as pd  # type: ignore
 
 
 class Extract:
     def __init__(self, browser):
         self.browser = browser
+        self.recanto_url = "https://www.recantodasletras.com.br"
 
         _, er = self.login()
         if er == 2:
@@ -43,9 +43,7 @@ class Extract:
     @exception_handler
     def login(self):
         """Login into Recanto das Letras"""
-        self.browser.get(
-            "https://www.recantodasletras.com.br/escrivaninha/login/login.php?"
-        )
+        self.browser.get(f"{self.recanto_url}/escrivaninha/login/login.php?")
         sleep(1 + random())
 
         page_element_login = self.browser.find_element_by_class_name("login-form-inner")
@@ -68,15 +66,12 @@ class Extract:
     @exception_handler
     def get_pages(self) -> List[str]:
         """Return an list of pages with poems."""
-        pages = ["https://www.recantodasletras.com.br/escrivaninha/publicacoes/index.php"]
+        pages = [f"{self.recanto_url}/escrivaninha/publicacoes/index.php"]
         self.browser.get(pages[0])
         index = self.browser.find_element_by_class_name("index-pagination-descr")
         max_pages = int(index.text.split(" ")[-1].split(":")[0])
         for i in range(2, max_pages + 1):
-            pages.append(
-                "https://www.recantodasletras.com.br/escrivaninha/"
-                f"publicacoes/index.php?pag={i}"
-            )
+            pages.append(f"{self.recanto_url}/escrivaninha/publicacoes/index.php?pag={i}")
 
         return pages
 

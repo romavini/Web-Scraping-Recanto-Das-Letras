@@ -1,7 +1,7 @@
 from getpoetry.extract_poetry import Extract
 from getpoetry.helpers import get_env
-from getpoetry.psql.database import write_into_db
-from selenium.webdriver import Chrome
+from getpoetry.psql.database import write_into_db  # type: ignore
+from selenium.webdriver import Chrome  # type: ignore
 
 
 def main():
