@@ -41,7 +41,7 @@ user =   # Usuário
 password =   # Senha
 
 # Webdriver
-chrome_driver_path =   # Caminho para Webdriver
+chrome_driver_path =   # Caminho para Webdriver (p.ex. C:\Users\user\.google\chromedriver.exe)
 
 # PostgreSQL
 user_db =   # Usuário do Banco de Dados

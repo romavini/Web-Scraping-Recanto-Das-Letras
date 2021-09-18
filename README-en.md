@@ -39,7 +39,7 @@ user =   # User
 password =   # Password
 
 # Webdriver
-chrome_driver_path =   # Path to Webdriver
+chrome_driver_path =   # Path to Webdriver (e.g. C:\Users\user\.google\chromedriver.exe)
 
 # PostgreSQL
 user_db =   # User to Database
